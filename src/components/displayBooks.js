@@ -17,7 +17,11 @@ function DisBooks(props) {
       </div>
 
       <div className="progress-percent">
-        <h3>{ book.percentage } 0%</h3>
+        <h3>
+          { book.percentage }
+          {' '}
+          0%
+        </h3>
       </div>
 
       <div className="update-progress">

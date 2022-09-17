@@ -6,15 +6,14 @@ import App from './App';
 import BooksContainer from './components/BooksContanier';
 import Categories from './pages/catagories';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-        <Route path="/" element={<BooksContainer />} />
-        <Route path="/categories" element={<Categories />} />
+          <Route path="/" element={<BooksContainer />} />
+          <Route path="/categories" element={<Categories />} />
 
         </Route>
       </Routes>

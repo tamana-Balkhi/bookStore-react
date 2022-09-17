@@ -7,7 +7,7 @@ const books = [
     id: 1,
     title: 'book title',
     author: 'book author',
-  }
+  },
 ];
 
 function BooksContainer() {
