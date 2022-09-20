@@ -4,7 +4,7 @@ import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import BooksContainer from './components/BooksContanier';
-import Categories from './pages/catagories';
+import Categories from './pages/categories';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
