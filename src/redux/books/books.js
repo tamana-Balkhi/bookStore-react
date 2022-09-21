@@ -5,7 +5,7 @@ const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const initialState = [];
 
 // Reducer
-export default function booksReducer(state = initialState, action) {
+function booksReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
@@ -16,6 +16,12 @@ export default function booksReducer(state = initialState, action) {
 }
 
 // Actions creators
-export const addBook = (book) => ({ type: ADD_BOOK, book });
+export const addBook = (book) => ({
+   type: ADD_BOOK, book 
+  });
 
-export const removeBook = (book) => ({ type: REMOVE_BOOK, book });
+export const removeBook = (book) => ({ 
+  type: REMOVE_BOOK, book
+});
+
+export default booksReducer;
