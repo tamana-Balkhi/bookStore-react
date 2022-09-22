@@ -1,21 +1,13 @@
-import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import DisBooks from './displayBooks';
 import Form from './inputForm';
 
-const books = [
-  {
-    id: 1,
-    title: 'book title',
-    author: 'book author',
-  },
-];
-
 function BooksContainer() {
-  const [state] = useState(books);
+  const books = useSelector((state) => state.books);
   return (
     <>
       <div id="books-list">
-        {state.map((book) => (
+        {books.map((book) => (
           <DisBooks key={book.id} book={book} />
         ))}
       </div>
