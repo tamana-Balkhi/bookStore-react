@@ -1,11 +1,17 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { checkStatus } from '../redux/categories/categories';
 
 function Categories() {
+  const dispatch = useDispatch();
   return (
-    <div>
-      <h1>Categories Bookstore</h1>
-      <button value="category" type="submit">ADD NEW CATEGORY</button>
-    </div>
+    <button
+      type="button"
+      id="check-status"
+      onClick={() => dispatch(checkStatus())}
+    >
+      Check status
+    </button>
   );
 }
 
