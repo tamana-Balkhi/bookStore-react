@@ -16,3 +16,4 @@ function categoriesReducer(state = initialState, action) {
 export const checkStatus = (category) => ({ type: CHECK_STATUS, category });
 
 export default categoriesReducer;
+
