@@ -1,19 +1,25 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getBooks } from '../redux/books/books';
 import DisBooks from './displayBooks';
 import Form from './inputForm';
 
-function BooksContainer() {
+export default function BooksContainer() {
   const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
   return (
     <>
-      <div id="books-list">
+      <ul id="books-list">
         {books.map((book) => (
-          <DisBooks key={book.id} book={book} />
+          <li key={book.item_id}>
+            <DisBooks book={book} />
+          </li>
         ))}
-      </div>
+      </ul>
       <Form />
     </>
   );
 }
-
-export default BooksContainer;
