@@ -4,7 +4,7 @@ A Single Page App built with React that allows users to access a books , see rea
 
 ## Live Demo
 
-[Not avilable yet]()
+[live demo](https://tamana-balkhi.github.io/bookStore-react/)
 
 ## Built With
 
